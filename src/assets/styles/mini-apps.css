@@ -1,0 +1,312 @@
+/* Mini Applications Styles */
+
+/* Todo App Styles */
+.todo-app {
+  padding: 1.5rem;
+  height: calc(100% - 80px);
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-input-section {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.todo-input {
+  flex: 4;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.todo-input:focus {
+  border-color: #40e0ff;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 2px rgba(64, 224, 255, 0.2);
+}
+
+.todo-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.add-btn {
+  flex: 1;
+  padding: 0.4rem 0.75rem !important;
+  background: linear-gradient(135deg, #40e0ff, #8a2be2) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 5px 15px rgba(64, 224, 255, 0.3) !important;
+}
+
+.todo-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.5rem;
+  margin-bottom: 0.3rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.todo-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.todo-item span {
+  flex: 1;
+  color: white;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.todo-item.completed span {
+  text-decoration: line-through;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.todo-checkbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #40e0ff;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.todo-checkbox.completed {
+  background: #40e0ff;
+}
+
+.todo-checkbox.completed::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+
+.delete-btn {
+  background: transparent !important;
+  color: #ff6b6b !important;
+  border: none !important;
+  padding: 0.25rem !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  transition: color 0.3s ease !important;
+}
+
+.delete-btn:hover {
+  color: #ff4444 !important;
+  transform: none !important;
+  background: transparent !important;
+}
+
+
+
+/* Weather App Styles */
+.weather-app {
+  padding: 1.5rem;
+  height: calc(100% - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.weather-card {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.weather-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.weather-info h4 {
+  color: white;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.temperature {
+  color: #40e0ff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+}
+
+.location-status {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  font-style: italic;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.detail-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-item span:first-child {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.detail-item span:last-child {
+  color: #40e0ff;
+  font-weight: 600;
+}
+
+/* Calculator Styles */
+.calculator-app {
+  padding: 1.5rem;
+  padding-bottom: 2rem;
+  height: calc(100% - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.calc-display {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: right;
+  font-family: 'Courier New', monospace;
+  min-height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.calc-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+}
+
+.calc-btn {
+  padding: 1rem !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 8px !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: white !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+.calc-btn:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  transform: translateY(-2px) !important;
+}
+
+.calc-btn.operator {
+  background: rgba(64, 224, 255, 0.2) !important;
+  border-color: #40e0ff !important;
+  color: #40e0ff !important;
+}
+
+.calc-btn.operator:hover {
+  background: rgba(64, 224, 255, 0.3) !important;
+  box-shadow: 0 0 10px rgba(64, 224, 255, 0.3) !important;
+}
+
+.calc-btn.clear {
+  background: rgba(255, 107, 107, 0.2) !important;
+  border-color: #ff6b6b !important;
+  color: #ff6b6b !important;
+}
+
+.calc-btn.clear:hover {
+  background: rgba(255, 107, 107, 0.3) !important;
+  box-shadow: 0 0 10px rgba(255, 107, 107, 0.3) !important;
+}
+
+.calc-btn.equals {
+  background: rgba(138, 43, 226, 0.2) !important;
+  border-color: #8a2be2 !important;
+  color: #8a2be2 !important;
+}
+
+.calc-btn.equals:hover {
+  background: rgba(138, 43, 226, 0.3) !important;
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.3) !important;
+}
+
+.calc-btn.zero {
+  grid-column: span 2;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .weather-details {
+    grid-template-columns: 1fr;
+  }
+  
+  .calc-buttons {
+    gap: 0.5rem;
+  }
+  
+  .calc-btn {
+    padding: 0.75rem !important;
+    font-size: 1rem !important;
+  }
+  
+  .display-value {
+    font-size: 1.5rem;
+  }
+}

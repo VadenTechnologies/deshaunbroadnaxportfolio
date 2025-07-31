@@ -1,0 +1,47 @@
+/* Base styles and CSS custom properties */
+@import './base.css';
+
+/* Portfolio component styles */
+@import './styles/portfolio-layout.css';
+@import './styles/project-details.css';
+@import './styles/device-mockups.css';
+@import './styles/mini-projects.css';
+@import './styles/mini-apps.css';
+
+/* Global app styles */
+#app {
+  width: 100%;
+  min-height: 100vh;
+  font-weight: normal;
+}
+
+/* Global link styles */
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+/* Global code wrapping styles */
+pre, code {
+  overflow-wrap: break-word !important;
+  word-wrap: break-word !important;
+  white-space: pre-wrap !important;
+  overflow-x: hidden !important;
+}
+
+/* Ensure long words break in all text elements */
+* {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+

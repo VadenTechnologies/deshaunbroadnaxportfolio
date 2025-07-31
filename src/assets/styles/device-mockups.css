@@ -1,0 +1,243 @@
+/* Device Mockups Styles */
+
+/* Phone Mockup */
+.phone-mockup {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.phone-mockup:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.phone-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9/19;
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  border-radius: 35px;
+  padding: 12px 8px 8px 8px;
+  box-shadow: 
+    0 0 0 2px #333,
+    0 0 0 4px #555,
+    0 15px 30px rgba(0, 0, 0, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.phone-speaker {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #444, #666, #444);
+  border-radius: 2px;
+  z-index: 10;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.phone-screen {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 16px);
+  background: #000;
+  border-radius: 28px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+.phone-power-button {
+  position: absolute;
+  right: -6px;
+  top: 80px;
+  width: 3px;
+  height: 60px;
+  background: linear-gradient(180deg, #333, #555, #333);
+  border-radius: 0 2px 2px 0;
+  box-shadow: 
+    inset 1px 0 2px rgba(255, 255, 255, 0.1),
+    1px 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.phone-volume-up {
+  position: absolute;
+  left: -6px;
+  top: 70px;
+  width: 3px;
+  height: 35px;
+  background: linear-gradient(180deg, #333, #555, #333);
+  border-radius: 2px 0 0 2px;
+  box-shadow: 
+    inset -1px 0 2px rgba(255, 255, 255, 0.1),
+    -1px 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.phone-volume-down {
+  position: absolute;
+  left: -6px;
+  top: 115px;
+  width: 3px;
+  height: 35px;
+  background: linear-gradient(180deg, #333, #555, #333);
+  border-radius: 2px 0 0 2px;
+  box-shadow: 
+    inset -1px 0 2px rgba(255, 255, 255, 0.1),
+    -1px 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.phone-home-indicator {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+/* Tablet Mockup */
+.tablet-mockup {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.tablet-mockup:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.tablet-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+  border-radius: 8px;
+  padding: 6px;
+  box-shadow: 
+    0 0 0 2px #333,
+    0 0 0 4px #555,
+    0 15px 30px rgba(0, 0, 0, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tablet-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tablet-power-button {
+  position: absolute;
+  top: -6px;
+  left: 80px;
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, #333, #555, #333);
+  border-radius: 2px 2px 0 0;
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.tablet-volume-up {
+  position: absolute;
+  top: -6px;
+  left: 140px;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, #333, #555, #333);
+  border-radius: 2px 2px 0 0;
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.tablet-volume-down {
+  position: absolute;
+  top: -6px;
+  left: 175px;
+  width: 30px;
+  height: 2px;
+  background: linear-gradient(90deg, #333, #555, #333);
+  border-radius: 2px 2px 0 0;
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Video Styles */
+.project-demo-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  object-position: 0px !important;
+}
+
+.tablet-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  top: 0px;
+  object-position: 0px !important;
+}
+
+/* Image Wrapper */
+.project-image-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.project-image-wrapper:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+}
+
+.project-hero-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Overlay Effects */
+.image-overlay,
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(64, 224, 255, 0.1), rgba(138, 43, 226, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.project-image-wrapper:hover .image-overlay,
+.phone-mockup:hover .video-overlay,
+.tablet-mockup:hover .video-overlay {
+  opacity: 1;
+}
