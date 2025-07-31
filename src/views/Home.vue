@@ -893,16 +893,20 @@ onUnmounted(() => {
 }
 
 @media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 2rem 2rem;
+  }
+
   .profile-section {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 2rem;
   }
-  
+
   .name-title {
     font-size: 2.5rem;
   }
-  
+
   .action-buttons {
     justify-content: center;
   }

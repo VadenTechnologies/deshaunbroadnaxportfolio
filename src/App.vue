@@ -15,6 +15,16 @@ const navigateTo = (path: string) => {
   router.push(path)
   mobileMenuOpen.value = false
 }
+
+const openGitHub = () => {
+  window.open('https://github.com/VadenTechnologies', '_blank')
+  mobileMenuOpen.value = false
+}
+
+const openLinkedIn = () => {
+  window.open('https://www.linkedin.com/in/deshaunbroadnax/', '_blank')
+  mobileMenuOpen.value = false
+}
 </script>
 
 <template>
@@ -40,6 +50,20 @@ const navigateTo = (path: string) => {
             text
             @click="navigateTo('/portfolio')"
           />
+          <Button
+            class="nav-link nav-social"
+            icon="pi pi-github"
+            text
+            @click="openGitHub"
+            aria-label="GitHub"
+          />
+          <Button
+            class="nav-link nav-social"
+            icon="pi pi-linkedin"
+            text
+            @click="openLinkedIn"
+            aria-label="LinkedIn"
+          />
         </div>
 
         <!-- Mobile Menu Button -->
@@ -64,6 +88,20 @@ const navigateTo = (path: string) => {
           label="Portfolio"
           text
           @click="navigateTo('/portfolio')"
+        />
+        <Button
+          class="mobile-nav-link mobile-social"
+          icon="pi pi-github"
+          label="GitHub"
+          text
+          @click="openGitHub"
+        />
+        <Button
+          class="mobile-nav-link mobile-social"
+          icon="pi pi-linkedin"
+          label="LinkedIn"
+          text
+          @click="openLinkedIn"
         />
       </div>
     </nav>
@@ -101,7 +139,7 @@ body {
   background: rgba(0, 8, 20, 0.9);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1rem 0;
+  padding: 0.75rem 0;
 }
 
 .nav-container {
@@ -147,8 +185,18 @@ body {
 
 .nav-link.active {
   color: #40e0ff !important;
-  background: rgba(64, 224, 255, 0.1) !important;
   border-radius: 8px !important;
+}
+
+.nav-social {
+  padding: 0.5rem !important;
+  min-width: auto !important;
+  width: auto !important;
+}
+
+.nav-social:hover {
+  color: #40e0ff !important;
+  transform: translateY(-2px) scale(1.1) !important;
 }
 
 .mobile-menu-btn {
@@ -164,14 +212,17 @@ body {
   background: rgba(0, 8, 20, 0.95);
   backdrop-filter: blur(20px);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
 }
 
 .mobile-menu.open {
-  max-height: 200px;
+  max-height: 280px;
+  padding: 1rem 2rem;
+  opacity: 1;
 }
 
 .mobile-nav-link {
@@ -191,21 +242,35 @@ body {
   border-radius: 8px !important;
 }
 
+.mobile-social {
+  margin-top: 0.5rem !important;
+  padding: 0.75rem 1rem !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.mobile-social:first-of-type {
+  margin-top: 1rem !important;
+}
+
 .main-content {
-  padding-top: 80px;
+  padding-top: 98px !important;
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 0;
+  }
+
   .nav-container {
     padding: 0 1rem;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
   }
 
   .nav-brand {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
   }
 
   .nav-menu {
@@ -214,17 +279,20 @@ body {
 
   .mobile-menu-btn {
     display: block;
-    position: absolute;
-    right: 1rem;
+    flex-shrink: 0;
   }
 
   .mobile-menu {
     display: flex;
-    text-align: center;
+    text-align: left;
   }
 
   .brand-text {
     font-size: 1.2rem;
+  }
+
+  .main-content {
+    padding-top: 60px;
   }
 }
 
